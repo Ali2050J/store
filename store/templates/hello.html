@@ -1,0 +1,13 @@
+<html>
+    <body>
+        {% for product in products %}
+            <h3>name: {{ product.name }}</h3>
+            <h3>category: {{ product.category.title }}</h3>
+            {% for comment in product.comments.all %}
+                {{ comment.id }}: {{ comment.name }}
+            {% endfor %}
+            <hr>
+        {% endfor %}
+        <hr>
+    </body>
+</html>
